@@ -1,0 +1,27 @@
+# Secrets: never commit
+secrets.yaml
+*.pem
+*.key
+.env
+
+# Home Assistant runtime files
+.storage/
+.cloud/
+home-assistant_v2.db*
+home-assistant.log*
+*.db
+*.db-shm
+*.db-wal
+.HA_VERSION
+tts/
+deps/
+backups/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# macOS
+.DS_Store

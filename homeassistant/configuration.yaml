@@ -1,0 +1,18 @@
+# Home Assistant configuration tracked in git.
+# Secrets (API keys, passwords) go in secrets.yaml on the device, never in this repo.
+# See secrets.yaml.example for the expected keys.
+
+# Loads Home Assistant's standard set of integrations (UI, history, mobile app, etc.)
+default_config:
+
+homeassistant:
+  # Each file in packages/ bundles one feature (climate, garage, network, ...)
+  packages: !include_dir_named packages
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Files managed by the Home Assistant UI editors
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
